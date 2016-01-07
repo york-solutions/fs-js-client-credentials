@@ -5,6 +5,17 @@ var restify = require('restify'),
 var server = restify.createServer();
 server.use(restify.acceptParser(server.acceptable));
 server.use(restify.bodyParser());
+
+// Force HTTPS
+server.use(function(req, res, next){
+  console.log(req.url);
+  console.log(req.headers);
+  if(req.headers['x-forwarded-proto'] !== 'https'){
+    res.redirect('https://' + req.headers.host.split(':')[0], next);
+  } else {
+    next();
+  }
+});
  
 server.get('/', function(req, res, next){
   fs.readFile('index.html', function(err, file){
