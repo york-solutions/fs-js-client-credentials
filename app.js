@@ -41,6 +41,6 @@ server.post('/token', function (req, res, next) {
   
 });
  
-server.listen($PORT, function () {
+server.listen(process.env.PORT, function () {
   console.log('%s listening at %s', server.name, server.url);
 });
