@@ -8,8 +8,6 @@ server.use(restify.bodyParser());
 
 // Force HTTPS
 server.use(function(req, res, next){
-  console.log(req.url);
-  console.log(req.headers);
   if(req.headers['x-forwarded-proto'] !== 'https'){
     res.redirect('https://' + req.headers.host.split(':')[0], next);
   } else {
