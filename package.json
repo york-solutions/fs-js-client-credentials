@@ -1,0 +1,22 @@
+{
+  "name": "fs-js-client-credentials",
+  "version": "1.0.0",
+  "description": "A simple form that authenticates with client credentials",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/york-solutions/fs-js-client-credentials.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/york-solutions/fs-js-client-credentials/issues"
+  },
+  "homepage": "https://github.com/york-solutions/fs-js-client-credentials#readme",
+  "dependencies": {
+    "familysearch-javascript-sdk": "^2.4.2",
+    "restify": "^4.0.3"
+  }
+}
